@@ -1,0 +1,27 @@
+<!--
+Subpage: Add a new book
+-->
+
+<h1>&#127381; Add Book</h1>
+<p>Please input the book details. </p>
+<form class="form-inline">
+  <div class="form-group">
+    <label for="name">Title:</label>
+    <input type="text" class="form-control" id="name" placeholder="A Brief History of Time" ng-model="book.title">
+  </div>
+  <div class="form-group">
+    <label for="author">Author:</label>
+    <input type="text" class="form-control" id="author" placeholder="Stephen Hawking" ng-model="book.author">
+  </div>
+</form>
+<form class="form-inline">
+  <div class="form-group">
+    <label for="isbn">ISBN number:</label>
+    <input type="text" class="form-control" id="isbn" placeholder="9780553380163" ng-model="book.isbn">
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button class="btn btn-success" ng-click="submit()">Add</button>
+    </div>
+  </div>
+</form>

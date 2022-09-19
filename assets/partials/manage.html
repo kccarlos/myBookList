@@ -1,0 +1,30 @@
+<!--
+Subpage: Manage Book
+Users can view all books with detailed information and choose which one to edit
+-->
+
+<h1>&#128377; Manage Books</h1>
+<p>Here you can manage all book records. Click on the list header to sort. </p>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th ng-click="orderByMe('title')">Title</th>
+        <th ng-click="orderByMe('author')">Author</th>
+        <th ng-click="orderByMe('isbn')">ISBN</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="book in books | orderBy:myOrderBy | filter:search">
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.isbn}}</td>
+        <td>
+          <a href="/book/{{book.id}}" class="btn btn-default btn-xs">View</a>
+          <button class="btn btn-danger btn-xs" ng-click="delete($index)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,14 @@
+<!--
+Subpage: Book List
+
+User can view a simplified version of book information (author and book name)
+-->
+
+<h1 align="center">&#128218; My Books</h1>
+<hr>
+<div ng-repeat="book in books" class="list-group">
+  <a href="/book/{{book.id}}" class="list-group-item">{{book.title}}
+    <span class="badge">{{book.author}} </span>
+  </a>
+</div>
+<hr>

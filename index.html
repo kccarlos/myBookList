@@ -1,0 +1,59 @@
+<!--
+Home Page
+
+ - Structure: Navigator bar and Subpage Container
+ - Controller defined in assets/js/MainController.js
+-->
+
+<html lang="en" ng-app="myBookApp" ng-controller="searchCtrl">
+  <head>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/angular-sanitize.min.js"></script>
+    <script src="assets/js/angular-strap.min.js"></script>
+    <script src="assets/js/angular-resource.min.js"></script>
+    <script src="assets/js/MainController.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/index">My Book List</a>
+      </div>
+      <div class="collapse navbar-collapse" id="nav-toggle">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/manage">Manage</a>
+          </li>
+          <li>
+            <a href="/addbook">Add</a>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+          <input type="text" class="form-control" placeholder="&#128270; Search" ng-model="search.$" ng-keyup="startSearch()">
+        </form>
+      </div>
+    </nav>
+
+
+    <!-- Dynamic Web Content Container -->
+    <div class="container">
+      <ng-view></ng-view>
+    </div>
+
+
+    <!-- Credit at the Bottom of the Page -->
+    <div style="position: relative">
+      <p style="position: fixed; bottom: 0; width:100%; text-align: center"> Made with &#128149; by <a href="https://github.com/kccarlos">KC</a> in Baltimore </p>
+    </div>
+  </body>
+</html>
