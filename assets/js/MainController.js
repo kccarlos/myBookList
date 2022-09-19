@@ -41,7 +41,7 @@ myBookApp.config(function($routeProvider, $locationProvider) {
 
 myBookApp.factory('books', function($resource) {
     //Update an existing book on server
-    var resource = $resource('http://carlosan.tech/book/:id', {
+    var resource = $resource('http://45.77.36.60/book/:id', {
         id: '@id'
     }, {
         update: {
@@ -49,7 +49,7 @@ myBookApp.factory('books', function($resource) {
         }
     });
     //Add a new book to the server
-    var resource2 = $resource('http://carlosan.tech/books/:id', {
+    var resource2 = $resource('http://45.77.36.60/books/:id', {
         id: '@id'
     }, {
         add: {
